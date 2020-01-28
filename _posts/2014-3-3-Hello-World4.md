@@ -1,7 +1,13 @@
 ---
 layout: post
-title: You're up and running!
+title: How to use Native Android functions in React Native (ie. Native Bridging)
 ---
+Hello guys Today we will discuss how we can expose Android Native functions for React Native. Regardless of a lot of theories  
+we will discuss only os steps--
+
+###Follow Bellow Steps to expose a function for Java Script
+
+
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
 
