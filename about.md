@@ -10,6 +10,6 @@ Some information about you!
 
 A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
+## Contact me
 
 [khalidkhan.dev@gmail.com](mailto:khalidkhan.dev@gmail.com)
