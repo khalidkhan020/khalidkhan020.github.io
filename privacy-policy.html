@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Alaya Attars</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #F6F0FA;
+      color: #2C2C2C;
+      line-height: 1.75;
+      padding: 0 0 60px;
+    }
+    header {
+      background: #3E3A6D;
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    header p { font-size: 0.9rem; opacity: 0.75; }
+    .badge {
+      display: inline-block;
+      background: #D4AF37;
+      color: #3E3A6D;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    main {
+      max-width: 780px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(62,58,109,0.08);
+      border-left: 5px solid #3E3A6D;
+    }
+    section.gold { border-left-color: #D4AF37; }
+    h2 {
+      font-size: 1.05rem;
+      color: #3E3A6D;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    p { margin-bottom: 12px; font-size: 0.95rem; }
+    ul { margin: 10px 0 12px 20px; font-size: 0.95rem; }
+    ul li { margin-bottom: 6px; }
+    a { color: #D4AF37; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    .updated {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: -10px;
+      margin-bottom: 28px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #aaa;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">✦ Privacy Policy</div>
+  <h1>Alaya Attars</h1>
+  <p>Your privacy matters to us. This policy explains what we collect and why.</p>
+</header>
+
+<main>
+  <p class="updated">Last updated: September 29, 2026</p>
+
+  <section>
+    <h2>1. Who We Are</h2>
+    <p>
+      Alaya Attars ("we", "our", or "us") operates the <strong>Alaya Attars</strong> mobile
+      application available under the app IDs <code>com.alaya.master</code>,
+      <code>com.alaya.users</code>, <code>com.alaya.partners</code>, and
+      <code>com.alaya.wholesaler</code> (collectively the "App"). The App is a fragrance
+      ordering and business management platform for our customers, partners, and internal team.
+    </p>
+    <p>
+      If you have any questions about this policy, contact us at
+      <a href="mailto:privacy@alayaattars.com">privacy@alayaattars.com</a>.
+    </p>
+  </section>
+
+  <section class="gold">
+    <h2>2. Information We Collect</h2>
+    <p>We collect only what is necessary to provide our service:</p>
+    <ul>
+      <li>
+        <strong>Account information</strong> — When you sign in with Google, we receive your
+        name, email address, and profile photo from Google's authentication service.
+      </li>
+      <li>
+        <strong>Profile information</strong> — Information you voluntarily provide: gender,
+        age group, fragrance preferences, and profession.
+      </li>
+      <li>
+        <strong>Order data</strong> — Details of orders you place including fragrances selected,
+        quantities, packaging options, discount coupons applied, and delivery address.
+      </li>
+      <li>
+        <strong>Wishlist &amp; blend data</strong> — Named wishlists and saved fragrance blend
+        configurations stored under your account.
+      </li>
+      <li>
+        <strong>Partner application data</strong> — If you apply to become a partner, we collect
+        your business name, business type, phone number, city, and an optional message.
+      </li>
+      <li>
+        <strong>Usage &amp; crash data</strong> — Anonymised analytics events and crash reports
+        collected via Firebase Analytics and Firebase Crashlytics.
+      </li>
+      <li>
+        <strong>Device location</strong> — Approximate location may be requested to pre-fill
+        delivery address fields. This is optional and only used with your permission.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To authenticate your identity and maintain your session securely.</li>
+      <li>To process, track, and manage your fragrance orders.</li>
+      <li>To personalise your catalogue experience (fragrance recommendations, family filters).</li>
+      <li>To display and apply eligible discount coupons for your account type.</li>
+      <li>To store your wishlists, saved blends, and order history.</li>
+      <li>To review and process partner or wholesaler applications.</li>
+      <li>To diagnose bugs and improve app performance via crash reports.</li>
+      <li>To send transactional notifications about your orders (status updates).</li>
+    </ul>
+    <p>We do <strong>not</strong> sell, rent, or share your personal information with
+    third-party advertisers.</p>
+  </section>
+
+  <section class="gold">
+    <h2>4. Data Storage &amp; Security</h2>
+    <p>
+      All user data is stored in <strong>Google Firebase Firestore</strong>, a secure cloud
+      database provided by Google LLC. Data is encrypted in transit (TLS) and at rest.
+      Access is governed by Firestore Security Rules that enforce user-scoped read/write —
+      you can only access your own documents.
+    </p>
+    <p>
+      Authentication is handled exclusively via <strong>Google Sign-In</strong> (OAuth 2.0).
+      We never store passwords.
+    </p>
+    <p>
+      We retain your data for as long as your account is active or as needed to fulfil
+      orders. You may request deletion at any time (see Section 8).
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Third-Party Services</h2>
+    <p>The App integrates the following third-party services, each with its own privacy policy:</p>
+    <ul>
+      <li>
+        <strong>Google Sign-In &amp; Firebase</strong> (Google LLC) —
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>
+      </li>
+      <li>
+        <strong>Firebase Analytics</strong> — Anonymous usage analytics.
+        <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a>
+      </li>
+      <li>
+        <strong>Firebase Crashlytics</strong> — Crash reporting. No personally identifiable
+        information is attached to crash reports.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. Coupon &amp; Pricing Data</h2>
+    <p>
+      Discount coupons visible to you depend on your account type (User, Partner, or Wholesaler).
+      We do not display internal cost, margin, or admin-only pricing information to non-admin
+      users. Coupon usage is tracked to prevent fraud and enforce per-user limits.
+    </p>
+  </section>
+
+  <section class="gold">
+    <h2>7. Children's Privacy</h2>
+    <p>
+      Alaya Attars is not directed to children under the age of 13. We do not knowingly collect
+      personal information from children. If you believe a child has provided us with their data,
+      please contact us and we will delete it promptly.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you.</li>
+      <li><strong>Correct</strong> inaccurate profile information via the Account screen in the App.</li>
+      <li><strong>Delete</strong> your account and all associated data by contacting us.</li>
+      <li>
+        <strong>Withdraw consent</strong> for location access via your device settings at any time.
+      </li>
+      <li>
+        <strong>Opt out</strong> of analytics by disabling Firebase Analytics through your device's
+        advertising ID settings.
+      </li>
+    </ul>
+    <p>
+      To exercise any of these rights, email us at
+      <a href="mailto:privacy@alayaattars.com">privacy@alayaattars.com</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will revise the
+      "Last updated" date at the top of this page. Continued use of the App after changes
+      are posted constitutes your acceptance of the updated policy.
+    </p>
+  </section>
+
+  <section class="gold">
+    <h2>10. Contact Us</h2>
+    <p>
+      <strong>Alaya Attars</strong><br />
+      Email: <a href="mailto:privacy@alayaattars.com">privacy@alayaattars.com</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  &copy; 2026 Alaya Attars. All rights reserved.
+</footer>
+
+</body>
+</html>
