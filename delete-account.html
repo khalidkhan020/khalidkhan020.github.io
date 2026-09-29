@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — Alaya Attars</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #F6F0FA;
+      color: #2C2C2C;
+      line-height: 1.75;
+      padding: 0 0 60px;
+    }
+    header {
+      background: #3E3A6D;
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    header p { font-size: 0.9rem; opacity: 0.75; }
+    .badge {
+      display: inline-block;
+      background: #D4AF37;
+      color: #3E3A6D;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    main {
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(62,58,109,0.08);
+      border-left: 5px solid #3E3A6D;
+    }
+    .card.gold { border-left-color: #D4AF37; }
+    .card.red  { border-left-color: #C62828; }
+    h2 {
+      font-size: 1.05rem;
+      color: #3E3A6D;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    p { margin-bottom: 12px; font-size: 0.95rem; }
+    ul { margin: 8px 0 12px 20px; font-size: 0.95rem; }
+    ul li { margin-bottom: 6px; }
+
+    /* ── In-app steps ── */
+    .steps { counter-reset: step; list-style: none; margin: 0 0 12px; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+      font-size: 0.95rem;
+    }
+    .steps li::before {
+      content: counter(step);
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #3E3A6D;
+      color: #D4AF37;
+      font-weight: 700;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Email request form ── */
+    .form-group { margin-bottom: 16px; }
+    label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #3E3A6D;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid #DDD5EB;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: #FAFAFA;
+      color: #2C2C2C;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: #3E3A6D;
+      background: #fff;
+    }
+    textarea { resize: vertical; min-height: 90px; }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #3E3A6D;
+      color: #D4AF37;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+    .submit-btn:hover { opacity: 0.88; }
+
+    .success-box {
+      display: none;
+      background: #F0FFF4;
+      border: 1px solid #A5D6A7;
+      border-radius: 10px;
+      padding: 20px 24px;
+      text-align: center;
+      color: #2E7D32;
+      font-size: 0.95rem;
+      margin-top: 16px;
+    }
+    .success-box .tick { font-size: 2rem; margin-bottom: 8px; }
+
+    .warning-box {
+      background: #FFF8E7;
+      border: 1px solid #D4AF37;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      color: #5D4037;
+      margin-bottom: 16px;
+    }
+    .warning-box strong { color: #C62828; }
+
+    a { color: #D4AF37; font-weight: 600; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: #aaa;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">🗑️ Account Deletion</div>
+  <h1>Alaya Attars</h1>
+  <p>Request deletion of your account and all associated data.</p>
+</header>
+
+<main>
+
+  <!-- ── What gets deleted ── -->
+  <div class="card red">
+    <h2>What will be deleted</h2>
+    <p>Submitting this request will permanently remove:</p>
+    <ul>
+      <li>Your profile (name, gender, fragrance preferences, profession)</li>
+      <li>Your order history</li>
+      <li>All wishlists and saved fragrance blends</li>
+      <li>Your ratings and reviews</li>
+      <li>Your Google Sign-In account link to Alaya Attars</li>
+    </ul>
+    <p style="margin-bottom:0;"><strong>This action is irreversible.</strong> Orders already placed and fulfilled cannot be retroactively removed from business records.</p>
+  </div>
+
+  <!-- ── Delete from inside the app ── -->
+  <div class="card gold">
+    <h2>Fastest way — delete inside the app</h2>
+    <p>If you still have access to the app, you can delete your account instantly:</p>
+    <ol class="steps">
+      <li>Open the Alaya Attars app and sign in.</li>
+      <li>Tap the <strong>Account</strong> tab (bottom navigation).</li>
+      <li>Scroll to the bottom of the actions list.</li>
+      <li>Tap <strong>Delete Account</strong> and confirm twice.</li>
+    </ol>
+    <p style="margin-bottom:0;">Your account and all data will be removed immediately.</p>
+  </div>
+
+  <!-- ── Request form ── -->
+  <div class="card">
+    <h2>Request deletion by email</h2>
+    <p>If you no longer have access to the app, fill in the form below and we will process your request within <strong>7 business days</strong>.</p>
+
+    <div class="warning-box">
+      <strong>Note:</strong> We will verify your identity using the email address linked to your Google account before processing the deletion.
+    </div>
+
+    <form id="deleteForm" onsubmit="handleSubmit(event)">
+
+      <div class="form-group">
+        <label for="email">Google account email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="yourname@gmail.com"
+          required />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Your name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="As it appears in the app" />
+      </div>
+
+      <div class="form-group">
+        <label for="scope">What would you like deleted? *</label>
+        <select id="scope" name="scope" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="full">Delete my entire account and all data</option>
+          <option value="data_only">Delete my data only (keep account)</option>
+          <option value="orders">Delete order history only</option>
+          <option value="wishlists">Delete wishlists and blends only</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Reason (optional)</label>
+        <textarea
+          id="reason"
+          name="reason"
+          placeholder="Let us know why you're leaving (optional)…"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Deletion Request</button>
+    </form>
+
+    <div class="success-box" id="successBox">
+      <div class="tick">✅</div>
+      <strong>Request received!</strong><br />
+      We'll process your deletion request within 7 business days and send a confirmation to your email.
+    </div>
+  </div>
+
+  <!-- ── Contact fallback ── -->
+  <div class="card">
+    <h2>Or email us directly</h2>
+    <p>
+      Send your deletion request to<br />
+      <a href="mailto:privacy@alayaattars.com?subject=Account%20Deletion%20Request">privacy@alayaattars.com</a>
+    </p>
+    <p style="margin-bottom:0;">
+      Include the Google account email address linked to your Alaya Attars account.
+      We will confirm deletion within 7 business days.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Alaya Attars &nbsp;·&nbsp;
+  <a href="https://khalidkhan020.github.io/privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="https://khalidkhan020.github.io/terms-and-conditions.html">Terms &amp; Conditions</a>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form    = document.getElementById('deleteForm');
+    const success = document.getElementById('successBox');
+    const email   = document.getElementById('email').value.trim();
+    const name    = document.getElementById('name').value.trim();
+    const scope   = document.getElementById('scope').value;
+    const reason  = document.getElementById('reason').value.trim();
+
+    // Build mailto link as fallback (no backend needed)
+    const subject = encodeURIComponent('Account Deletion Request — Alaya Attars');
+    const body    = encodeURIComponent(
+      'Account Deletion Request\n' +
+      '------------------------\n' +
+      'Email: ' + email + '\n' +
+      'Name: '  + (name || 'Not provided') + '\n' +
+      'Scope: ' + scope + '\n' +
+      'Reason: ' + (reason || 'Not provided') + '\n'
+    );
+    window.location.href = 'mailto:privacy@alayaattars.com?subject=' + subject + '&body=' + body;
+
+    // Show success message
+    form.style.display    = 'none';
+    success.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
